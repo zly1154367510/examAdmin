@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zly.dao.SelectItemMapper">
+  <resultMap id="BaseResultMap" type="com.zly.model.SelectItem">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="select_question_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="isanswer" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="content" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="memo" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, select_question_id, isanswer, content, memo
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ex_select_item
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from ex_select_item
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zly.model.SelectItem">
+    insert into ex_select_item (id, select_question_id, isanswer, 
+      content, memo)
+    values (#{id,jdbcType=INTEGER}, #{selectQuestionId,jdbcType=INTEGER}, #{isanswer,jdbcType=BIT}, 
+      #{content,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zly.model.SelectItem">
+    insert into ex_select_item
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="selectQuestionId != null">
+        select_question_id,
+      </if>
+      <if test="isanswer != null">
+        isanswer,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="memo != null">
+        memo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="selectQuestionId != null">
+        #{selectQuestionId,jdbcType=INTEGER},
+      </if>
+      <if test="isanswer != null">
+        #{isanswer,jdbcType=BIT},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null">
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zly.model.SelectItem">
+    update ex_select_item
+    <set>
+      <if test="selectQuestionId != null">
+        select_question_id = #{selectQuestionId,jdbcType=INTEGER},
+      </if>
+      <if test="isanswer != null">
+        isanswer = #{isanswer,jdbcType=BIT},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null">
+        memo = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zly.model.SelectItem">
+    update ex_select_item
+    set select_question_id = #{selectQuestionId,jdbcType=INTEGER},
+      isanswer = #{isanswer,jdbcType=BIT},
+      content = #{content,jdbcType=VARCHAR},
+      memo = #{memo,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zly.model.SelectItem">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="select_question_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="isanswer" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="content" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="memo" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, select_question_id, isanswer, content, memo
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ex_select_item
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from ex_select_item
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zly.model.SelectItem">
+    insert into ex_select_item (id, select_question_id, isanswer, 
+      content, memo)
+    values (#{id,jdbcType=INTEGER}, #{selectQuestionId,jdbcType=INTEGER}, #{isanswer,jdbcType=BIT}, 
+      #{content,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zly.model.SelectItem">
+    insert into ex_select_item
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="selectQuestionId != null">
+        select_question_id,
+      </if>
+      <if test="isanswer != null">
+        isanswer,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="memo != null">
+        memo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="selectQuestionId != null">
+        #{selectQuestionId,jdbcType=INTEGER},
+      </if>
+      <if test="isanswer != null">
+        #{isanswer,jdbcType=BIT},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null">
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zly.model.SelectItem">
+    update ex_select_item
+    <set>
+      <if test="selectQuestionId != null">
+        select_question_id = #{selectQuestionId,jdbcType=INTEGER},
+      </if>
+      <if test="isanswer != null">
+        isanswer = #{isanswer,jdbcType=BIT},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null">
+        memo = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zly.model.SelectItem">
+    update ex_select_item
+    set select_question_id = #{selectQuestionId,jdbcType=INTEGER},
+      isanswer = #{isanswer,jdbcType=BIT},
+      content = #{content,jdbcType=VARCHAR},
+      memo = #{memo,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
