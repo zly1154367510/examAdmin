@@ -9,6 +9,12 @@ import java.util.List;
  */
 public interface SelectQuestionService {
 
-    List<SelectQuestion> getAll();
+    List<SelectQuestion> getAll(int page);
+
+    SelectQuestion selectById(Integer id);
+
+    int updateQuestion(Integer qId,String subject,String type,String title,String[] trueAnswer,String[] isAnswer,String[] content,String[] itemId);
+
+    int getItemNum();
 
 }

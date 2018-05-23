@@ -1,11 +1,14 @@
 package com.zly.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.zly.dao.SelectItemMapper;
 import com.zly.dao.SelectQuestionMapper;
 import com.zly.model.SelectQuestion;
 import com.zly.service.SelectQuestionService;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,8 +21,38 @@ public class SelectQuestionServiceImpl implements SelectQuestionService {
     @Autowired
     private SelectQuestionMapper selectQuestionMapper;
 
+    @Autowired
+    private SelectItemMapper selectItemMapper;
+
     @Override
-    public List<SelectQuestion> getAll() {
+    public List<SelectQuestion> getAll(int page) {
+        PageHelper.startPage(page,5);
         return selectQuestionMapper.selectAll();
+    }
+
+    @Override
+    public SelectQuestion selectById(Integer id) {
+        return selectQuestionMapper.selectAllById(id);
+    }
+
+    @Transactional
+    @Override
+    public int updateQuestion(Integer qId,String subject,String type,String title,String[] trueAnswer,String[] isAnswer,String[] content,String[] itemId) {
+        int res = selectQuestionMapper.updAllById(qId,subject,type,title);
+        for (int i = 0;i<trueAnswer.length;i++){
+            selectItemMapper.updIsAnswerById(Integer.parseInt(trueAnswer[i]),0);
+        }
+        for (int i = 0;i<isAnswer.length;i++){
+            selectItemMapper.updIsAnswerById(Integer.parseInt(isAnswer[i]),1);
+        }
+        for (int i = 0;i<content.length;i++){
+            selectItemMapper.updContentById(new Integer(itemId[i]),content[i]);
+        }
+        return res;
+    }
+
+    @Override
+    public int getItemNum() {
+        return selectQuestionMapper.selectNum();
     }
 }

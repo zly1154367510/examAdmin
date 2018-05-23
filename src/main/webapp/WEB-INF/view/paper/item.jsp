@@ -10,41 +10,88 @@
 <%@ page isELIgnored="false" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>题目管理</title>
 </head>
 <body>
-<>
 <jsp:include page="../public/header.jsp"/>
-<div class="row ">
-    <div class="col-md-10">
-        <table class="table">
-            <thead>
-            <tr>
-                <th><i class="fa fa-bullhorn"></i> 科目</th>
-                <th class="hidden-phone"><i class="fa fa-question-circle"></i> 类型</th>
-                <th><i class="fa fa-bookmark"></i> 题目</th>
-                <th><i class=" fa fa-edit"></i> 操作</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-                <c:forEach items="${list}" var="item">
-                    <tr>
-                        <td><a href="basic_table.html#">${item.subject}</a></td>
-                        <td class="hidden-phone">${item.type}</td>
+<section id="main-content">
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> 选择题管理</h3>
+        <div class="row mt">
+            <div class="col-lg-12">
+                <div class="content-panel">
+                    <h4><i class="fa fa-angle-right"></i> 选择题</h4>
+                    <a href="/paper/addItem">
+                        <div id="myButtons1" class="bs-example">
+                          <button type="button" class="btn btn-primary">添加题目</button>
+                        </div>
+                    </a>
+                    <section id="unseen">
+                        <table class="table table-bordered table-striped table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>科目</th>
+                                    <th>类型</th>
+                                    <th>题目</th>
+                                    <th>选项</th>
+                                    <th>操作</th>
 
-                        <td><span class="label label-info label-mini">${item.title}</span></td>
-                        <td>
-                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                            <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                        </td>
-                    </tr>
-                </c:forEach>
-            </tbody>
-        </table>
-    </div>
-</div>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <c:forEach items="${list}" var="item">
+                                    <tr>
+                                        <td>${item.subject}</td>
+                                        <td>${item.type}</td>
+                                        <td>${item.title}</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                    点击查看选项
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                    <c:forEach items="${item.itemList}" var="itemm">
+                                                        <li><a href="">${itemm.content}</a><c:if test="${itemm.isanswer}==1">-我是答案</c:if></li>
+                                                    </c:forEach>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td><a href="/paper/itemDetail?id=${item.id}">修改</a></td>
+                                    </tr>
+                                </c:forEach>
+                            </tbody>
+                        </table>
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="http://localhost:8083/paper/item?page=${previousPage}" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://localhost:8083/paper/item?page=${nextPage}" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <form action="http://localhost:8083/paper/item" method="get">
+                                        <div class="input-group" width="20%">
+                                            <input type="text" class="form-control" name="page" width="20%" placeholder="Search for...">
+                                            <span class="input-group-btn">
+                                            <input class="btn btn-default" type="submit">跳转</input>
+                                        </span>
+                                        </div>
+                                    </form>
 
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
+                </div><!-- /content-panel -->
+            </div><!-- /col-lg-4 -->
+        </div><!-- /row -->
+    </section>
+</section>
 </body>
 </html>

@@ -2,12 +2,17 @@ package com.zly.controller;
 
 import com.zly.model.SelectQuestion;
 import com.zly.service.SelectQuestionService;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.reflection.SystemMetaObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -21,9 +26,45 @@ public class PaparController {
     private SelectQuestionService selectQuestionService;
 
     @RequestMapping("paper/item")
-    public String item(Model model){
-        List<SelectQuestion> list = selectQuestionService.getAll();
+    public String item(Model model,@RequestParam(value = "page", required = false, defaultValue = "1") int page){
+
+        long pages = selectQuestionService.getItemNum() / 10;
+        model.addAttribute("pages", pages);
+        model.addAttribute("page",page);
+        model.addAttribute("nextPage", page + 1);
+        model.addAttribute("previousPage", page - 1);
+        List<SelectQuestion> list = selectQuestionService.getAll(page);
         model.addAttribute("list",list);
         return "paper/item";
+    }
+    @RequestMapping("paper/itemDetail")
+    public String itemDetail(Model model, @RequestParam("id")int id){
+        //System.out.println(id);
+        model.addAttribute("item",selectQuestionService.selectById(id));
+        return "paper/itemDetails";
+    }
+    @RequestMapping("paper/itemDetailDo")
+    public String itemDetail(Model model,HttpServletRequest request){
+        int itemId = new Integer(request.getParameter("itemId"));
+        String subject = request.getParameter("subject");
+        String title = request.getParameter("title");
+        String type = request.getParameter("type");
+        String[] isanswer = request.getParameterValues("isanswer");
+        String[] trueAnswer = request.getParameterValues("trueAnswer");
+        String[] content = request.getParameterValues("content");
+        String[] itemmId = request.getParameterValues("itemmId");
+        int i = selectQuestionService.updateQuestion(itemId,subject,type,title,trueAnswer,isanswer,content,itemmId);
+        if (i != 0) {
+            model.addAttribute("message","成功修改"+1+"条");
+        }
+        else{
+            model.addAttribute("message","修改失败");
+        }
+        return "message/success";
+    }
+
+    @RequestMapping("paper/addItem")
+    public String addItem(){
+        return "paper/addItem";
     }
 }

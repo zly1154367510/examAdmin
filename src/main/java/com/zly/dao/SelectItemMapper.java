@@ -3,6 +3,7 @@ package com.zly.dao;
 import com.zly.model.SelectItem;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -21,4 +22,10 @@ public interface SelectItemMapper {
 
     @Select("select * from ex_select_item where select_question_id =#{questionId}")
     List<SelectItem> selectByQuestionId(@Param("questionId")int id);
+
+    @Update("update ex_select_item set content=#{content} where id=#{id}")
+    int updContentById(@Param("id") Integer id,@Param("content") String content);
+
+    @Update("update ex_select_item set isanswer=#{isanswer} where id=#{id}")
+    int updIsAnswerById(@Param("id") Integer id,@Param("isanswer") int isanswer);
 }
