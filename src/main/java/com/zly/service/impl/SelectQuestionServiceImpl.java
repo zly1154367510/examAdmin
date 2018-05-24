@@ -5,6 +5,7 @@ import com.zly.dao.SelectItemMapper;
 import com.zly.dao.SelectQuestionMapper;
 import com.zly.model.SelectQuestion;
 import com.zly.service.SelectQuestionService;
+import com.zly.utils.InsertId;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,5 +55,24 @@ public class SelectQuestionServiceImpl implements SelectQuestionService {
     @Override
     public int getItemNum() {
         return selectQuestionMapper.selectNum();
+    }
+
+    @Override
+    @Transactional
+    public int insertQuestion(String subject, String type, String title, Integer[] isAnswer, String[] content) {
+        InsertId insertId = new InsertId();
+        int res = selectQuestionMapper.insertAll(subject,type,title,insertId);
+        System.out.print(insertId.getId());
+        for (Integer item : isAnswer){
+            selectItemMapper.insertAll(insertId.getId(),1,content[item]);
+            content[item] = null;
+        }
+        for (String item:content){
+            if (item==null){
+                continue;
+            }
+            selectItemMapper.insertAll(insertId.getId(),0,item);
+        }
+        return res;
     }
 }

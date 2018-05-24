@@ -53,6 +53,11 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
 
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!--启用最新的注解器、映射器-->
+    <mvc:annotation-driven/>
+
     <context:annotation-config/>
 
     <context:component-scan base-package="com.zly.service"/>

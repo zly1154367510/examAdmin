@@ -37,7 +37,7 @@
             <div class="col-lg-12">
                 <div class="form-panel">
                     <h4 class="mb"><i class="fa fa-angle-right"></i> 添加选择题</h4>
-                    <form id="itemForm" class="form-horizontal style-form" method="post" action="/paper/itemDetailDo">
+                    <form id="itemForm" class="form-horizontal style-form" method="post" action="/paper/addItemDo">
                         <input type="hidden" name="itemId" />
                         <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">科目</label>
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="submit" value="提交">
+                        <input type="submit" value="提交" class='btn-default'>
                     </form>
                 </div>
             </div>
@@ -80,42 +80,83 @@
 </section>
 </section>
 <script type="text/javascript">
-
+    //多选下标
+    var i = 0
+    //单选下标
+    var j = 0
     $(document).ready(function(){
+        $("body").on('click',"#addMultinomialAnswer",function(){
+            i+=1
+            var htmlText = "<label>"
+            htmlText += "<input type='checkbox' name='isanswer' class='isanswer' value='"+i+"'>"
+            htmlText += " 是否是答案"
+            htmlText += "<input type='text' name='content' class='form-control round-form'/>"
+            htmlText += "</label>"
+            $("#selectItem").append(htmlText)
+        })
+        $("body").on('click',"#addIndividualAnswer",function(){
+            j+=1
+            var htmlText = "<label>"
+            htmlText += "<input type='radio' name='isanswer' class='isanswer' value='"+j+"'>"
+            htmlText += " 是否是答案"
+            htmlText += "<input type='text' name='content' class='form-control round-form'/>"
+            htmlText += "</label>"
+            $("#selectItem").append(htmlText)
+        })
+//        $("body").on('click','.isanswer',function(){
+//            console.log("hahaha")
+//            console.log(this.val())
+//            if (this.val()==undefined){
+//
+//                this.val(this.next().val())
+//            }
+//            console.log(this.val())
+//        })
         var flag = true
+        var flag1 = true
         $("input[name=type]").each(function(){
             $(this).click(function(){
 
                 var discount = $(this).val();
                 $("#selecItem").show(1000);
                 if(discount=="单"){
+                    var addText = "<input type='button' id='addIndividualAnswer' value='添加答案' class='btn-default'></input>"
                     var htmlText = "<label>"
-                    htmlText += "<input type='radio' name='isanswer' >"
+                    htmlText += "<input type='radio' name='isanswer' class='isanswer' value='0'>"
                     htmlText += " 是否是答案"
                     htmlText += "<input type='text' name='content' class='form-control round-form'/>"
                     htmlText += "</label>"
-                    if (flag) {
-                        $("#selectItem").append(htmlText)
-                        htmlText = ""
+                    //第一次点击
+                    if(flag){
+                        if(!flag1){
+                            $("#selectItem").children().remove();
+                        }
+                        addText += htmlText
+                        $("#selectItem").append(addText)
+                        j = 0
+                        addText = ""
                         flag = false
-                    }else{
-                        $("#selectItem").children().remove();
-                        flag = true
-                }
+                        flag1 = true
+                    }
                 }else if (discount=="多"){
 
+                    var addText = "<input type='button' id='addMultinomialAnswer' value='添加答案' class='btn-default'></input>"
                     var htmlText = "<label>"
-                    htmlText += "<input type='checkbox' name='isanswer' >"
+                    htmlText += "<input type='checkbox' name='isanswer' class='isanswer' value='0'>"
                     htmlText += " 是否是答案"
                     htmlText += "<input type='text' name='content' class='form-control round-form'/>"
                     htmlText += "</label>"
-                    if (flag) {
-                        $("#selectItem").append(htmlText)
-                        htmlText = ""
-                        flag = false
-                    }else{
-                        $("#selectItem").children().remove();
+                    if(flag1){
+                        if(!flag){
+                            $("#selectItem").children().remove();
+                        }
+                        addText += htmlText
+                        i = 0
+                        $("#selectItem").append(addText)
+                        addText = ""
                         flag = true
+                        flag1 = false
+
                     }
                 }
 

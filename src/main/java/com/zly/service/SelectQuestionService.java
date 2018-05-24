@@ -17,4 +17,6 @@ public interface SelectQuestionService {
 
     int getItemNum();
 
+    int insertQuestion(String subject,String type,String title,Integer[] isAnswer,String[] content);
+
 }

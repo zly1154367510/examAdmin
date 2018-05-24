@@ -67,4 +67,29 @@ public class PaparController {
     public String addItem(){
         return "paper/addItem";
     }
+
+    @RequestMapping("paper/addItemDo")
+    public String addItemDo(
+            @RequestParam("subject")String subject,
+            @RequestParam("type")String type,
+            @RequestParam("title")String title,
+            @RequestParam("isanswer")Integer[] isanswer,
+            @RequestParam("content")String[] content,
+            Model model){
+
+//        System.out.println(subject);
+//        System.out.println(type);
+//        System.out.println(title);
+//        System.out.println(isanswer);
+//        System.out.println(content);
+        int res = selectQuestionService.insertQuestion(subject,type,title,isanswer,content);
+        if (res != 0){
+            model.addAttribute("message","成功加入"+res+"条题目");
+            return "message/success";
+        }else{
+            model.addAttribute("message","添加题目失败请重试");
+            return "message/success";
+        }
+
+    }
 }

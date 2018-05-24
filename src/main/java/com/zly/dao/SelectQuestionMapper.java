@@ -1,6 +1,7 @@
 package com.zly.dao;
 
 import com.zly.model.SelectQuestion;
+import com.zly.utils.InsertId;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -47,4 +48,8 @@ public interface SelectQuestionMapper {
 
     @Select("select count(*) from ex_select_question")
     int selectNum();
+
+    @Insert("insert into ex_select_question(id,subject,type,title) values (null,#{subject},#{type},#{title})")
+    @Options(useGeneratedKeys = true, keyProperty = "InsertId.id")
+    int insertAll(@Param("subject")String subject,@Param("type")String type,@Param("title")String title,@Param("InsertId")InsertId id);
 }
