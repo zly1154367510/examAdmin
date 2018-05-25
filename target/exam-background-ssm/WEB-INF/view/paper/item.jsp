@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: zly11
-  Date: 2018/5/22
-  Time: 16:49
+  Date: 2018/5/25
+  Time: 15:36
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -10,56 +10,44 @@
 <%@ page isELIgnored="false" %>
 <html>
 <head>
-    <title>题目管理</title>
+    <title>试卷管理</title>
 </head>
 <body>
 <jsp:include page="../public/header.jsp"/>
 <section id="main-content">
     <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> 选择题管理</h3>
+        <h3><i class="fa fa-angle-right"></i> 试卷管理</h3>
         <div class="row mt">
             <div class="col-lg-12">
                 <div class="content-panel">
-                    <h4><i class="fa fa-angle-right"></i> 选择题</h4>
+                    <h4><i class="fa fa-angle-right"></i> 试卷</h4>
                     <a href="/paper/addItem">
                         <div id="myButtons1" class="bs-example">
-                          <button type="button" class="btn btn-primary">添加题目</button>
+                            <button type="button" class="btn btn-primary">添加试卷</button>
                         </div>
                     </a>
                     <section id="unseen">
                         <table class="table table-bordered table-striped table-condensed">
                             <thead>
-                                <tr>
-                                    <th>科目</th>
-                                    <th>类型</th>
-                                    <th>题目</th>
-                                    <th>选项</th>
-                                    <th>操作</th>
+                            <tr>
+                                <th>试卷名</th>
+                                <th>创建时间</th>
+                                <th>科目</th>
+                                <th>试卷详情</th>
+                                <th>操作</th>
 
-                                </tr>
+                            </tr>
                             </thead>
                             <tbody>
-                                <c:forEach items="${list}" var="item">
-                                    <tr>
-                                        <td>${item.subject}</td>
-                                        <td>${item.type}</td>
-                                        <td>${item.title}</td>
-                                        <td>
-                                            <div class="dropdown">
-                                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                    点击查看选项
-                                                    <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                                    <c:forEach items="${item.itemList}" var="itemm">
-                                                        <li><a href="">${itemm.content}</a><c:if test="${itemm.isanswer}==1">-我是答案</c:if></li>
-                                                    </c:forEach>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                        <td><a href="/paper/itemDetail?id=${item.id}">修改</a></td>
-                                    </tr>
-                                </c:forEach>
+                            <c:forEach items="${list}" var="item">
+                                <tr>
+                                    <td>${item.paper.name}</td>
+                                    <td>${item.paper.created}</td>
+                                    <td>${item.paper.subject}</td>
+                                    <td>详情</td>
+                                    <td><a href="/paper/itemDetail?id=${item.id}">修改</a></td>
+                                </tr>
+                            </c:forEach>
                             </tbody>
                         </table>
                         <nav aria-label="Page navigation">

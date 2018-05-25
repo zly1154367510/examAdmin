@@ -44,7 +44,7 @@ public class AdminController {
             model.addAttribute("message","登录失败");
             return "message/success";
         }
-        return "redirect:/paper/item";
+        return "redirect:/question/item";
     }
 
 

@@ -67,16 +67,12 @@
         </javaClientGenerator>
 
 
-        <table tableName="ex_select_item" domainObjectName="SelectItem"
+        <table tableName="ex_paper" domainObjectName="Paper"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
         </table>
-        <table tableName="ex_select_question" domainObjectName="SelectQuestion"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
-        </table>
+
 
 
 

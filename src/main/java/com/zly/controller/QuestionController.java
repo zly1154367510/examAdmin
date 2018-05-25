@@ -2,14 +2,13 @@ package com.zly.controller;
 
 import com.zly.model.SelectQuestion;
 import com.zly.service.SelectQuestionService;
+import com.zly.utils.JsonResult;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.reflection.SystemMetaObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -19,13 +18,13 @@ import java.util.List;
  * Created by zly11 on 2018/5/22.
  */
 @Controller
-public class PaparController {
+public class QuestionController {
 
 
     @Autowired
     private SelectQuestionService selectQuestionService;
 
-    @RequestMapping("paper/item")
+    @RequestMapping("question/item")
     public String item(Model model,@RequestParam(value = "page", required = false, defaultValue = "1") int page){
 
         long pages = selectQuestionService.getItemNum() / 10;
@@ -35,15 +34,15 @@ public class PaparController {
         model.addAttribute("previousPage", page - 1);
         List<SelectQuestion> list = selectQuestionService.getAll(page);
         model.addAttribute("list",list);
-        return "paper/item";
+        return "question/item";
     }
-    @RequestMapping("paper/itemDetail")
+    @RequestMapping("question/itemDetail")
     public String itemDetail(Model model, @RequestParam("id")int id){
         //System.out.println(id);
         model.addAttribute("item",selectQuestionService.selectById(id));
-        return "paper/itemDetails";
+        return "question/itemDetails";
     }
-    @RequestMapping("paper/itemDetailDo")
+    @RequestMapping("question/itemDetailDo")
     public String itemDetail(Model model,HttpServletRequest request){
         int itemId = new Integer(request.getParameter("itemId"));
         String subject = request.getParameter("subject");
@@ -63,12 +62,12 @@ public class PaparController {
         return "message/success";
     }
 
-    @RequestMapping("paper/addItem")
+    @RequestMapping("question/addItem")
     public String addItem(){
-        return "paper/addItem";
+        return "question/addItem";
     }
 
-    @RequestMapping("paper/addItemDo")
+    @RequestMapping("question/addItemDo")
     public String addItemDo(
             @RequestParam("subject")String subject,
             @RequestParam("type")String type,
@@ -91,5 +90,11 @@ public class PaparController {
             return "message/success";
         }
 
+    }
+
+    @ResponseBody
+    @RequestMapping("question/selQuestionBysubject")
+    public JsonResult selQuestionBysubject(@RequestParam("subject")String subject, @RequestParam(value = "page", required = false, defaultValue = "1") int page){
+        return JsonResult.ok(selectQuestionService.selecBySubject(subject, page));
     }
 }

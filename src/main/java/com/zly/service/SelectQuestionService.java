@@ -11,6 +11,8 @@ public interface SelectQuestionService {
 
     List<SelectQuestion> getAll(int page);
 
+    List<SelectQuestion> selecBySubject(String subject,int page);
+
     SelectQuestion selectById(Integer id);
 
     int updateQuestion(Integer qId,String subject,String type,String title,String[] trueAnswer,String[] isAnswer,String[] content,String[] itemId);
@@ -18,5 +20,7 @@ public interface SelectQuestionService {
     int getItemNum();
 
     int insertQuestion(String subject,String type,String title,Integer[] isAnswer,String[] content);
+
+
 
 }

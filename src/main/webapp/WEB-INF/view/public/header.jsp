@@ -75,9 +75,16 @@
                 </li>
 
                 <li class="mt">
-                    <a class="active" href="/paper/item">
+                    <a class="active" href="/question/item">
                         <i class="fa fa-dashboard"></i>
                         <span>试题管理</span>
+                    </a>
+                </li>
+
+                <li class="mt">
+                    <a class="active" href="/paper/item">
+                        <i class="fa fa-dashboard"></i>
+                        <span>试卷管理</span>
                     </a>
                 </li>
 
