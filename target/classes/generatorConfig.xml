@@ -67,7 +67,7 @@
         </javaClientGenerator>
 
 
-        <table tableName="ex_paper" domainObjectName="Paper"
+        <table tableName="ex_score" domainObjectName="Score"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">

@@ -54,6 +54,8 @@ public interface SelectQuestionMapper {
     })
     List<SelectQuestion> selectAllBySubject(String subject);
 
+    Integer selectNumBySubject(String subject);
+
     @Update("update ex_select_question set subject=#{subject},type=#{type},title=#{title} where id=#{id}")
     int updAllById(@Param("id")Integer id,@Param("subject")String subject,@Param("type")String type,@Param("title")String title);
 

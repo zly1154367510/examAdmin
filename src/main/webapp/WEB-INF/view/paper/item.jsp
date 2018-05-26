@@ -11,9 +11,36 @@
 <html>
 <head>
     <title>试卷管理</title>
+    <style>
+        .mask{
+            position:absolute;
+            top:0%; /**遮罩全屏top,left都为0,width,height为100%**/
+            left:0%;
+            width:100%;
+            height:100%;
+            filter:alpha(opacity=50);
+            opacity: 0.5;
+            -moz-opacity:0.5;
+            -khtml-opacity: 0.5;
+            background-color:black;
+            z-index: 1001;
+            display:none;
+            z-index: 888;
+        }
+        .itemDiv{
+
+            background-color: white;
+            z-index: 999;
+            display: none;
+            width: 80%;
+            height: 80%;
+            overflow:auto
+        }
+    </style>
 </head>
 <body>
 <jsp:include page="../public/header.jsp"/>
+
 <section id="main-content">
     <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> 试卷管理</h3>
@@ -39,15 +66,15 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <c:forEach items="${list}" var="item">
-                                <tr>
-                                    <td>${item.paper.name}</td>
-                                    <td>${item.paper.created}</td>
-                                    <td>${item.paper.subject}</td>
-                                    <td>详情</td>
-                                    <td><a href="/paper/itemDetail?id=${item.id}">修改</a></td>
-                                </tr>
-                            </c:forEach>
+                                <c:forEach items="${list}" var="item">
+                                    <tr >
+                                        <td>${item.name}</td>
+                                        <td>${item.created}</td>
+                                        <td>${item.subject}</td>
+                                        <td class="questionItem" id="${item.id}"><button >详情</button></td>
+                                        <td><a href="/paper/itemDetail?id=${item.id}">修改</a></td>
+                                    </tr>
+                                </c:forEach>
                             </tbody>
                         </table>
                         <nav aria-label="Page navigation">
@@ -81,5 +108,83 @@
         </div><!-- /row -->
     </section>
 </section>
+<div class="mask"></div>
+<div class="itemDiv">
+    <p align="right" id="itemDivClose" style="font-size: 50px;cursor:pointer ">X</p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>题目</th>
+            <th>选项</th>
+
+        </tr>
+        </thead>
+        <tbody class="item">
+
+        </tbody>
+    </table>
+</div>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+<script type="text/javascript">
+$(function(){
+    function funShowDivCenter() {
+        var top = ($(window).height() -  $(".mask").height()) / 2;
+        var left = ($(window).width() -  $(".mask").width()) / 2;
+        var scrollTop = $(document).scrollTop();
+        var scrollLeft = $(document).scrollLeft();
+        $(".mask").css({ position: 'absolute', 'top': top + scrollTop, left: left + scrollLeft }).toggle(500);
+    }
+    function funShowDivCenter1() {
+        var top = ($(window).height() -   $(".itemDiv").height()) / 2;
+        var left = ($(window).width() -   $(".itemDiv").width()) / 2;
+        var scrollTop = $(document).scrollTop();
+        var scrollLeft = $(document).scrollLeft();
+        $(".itemDiv").css({ position: 'absolute', 'top': top + scrollTop, left: left + scrollLeft }).toggle();
+    }
+    $(document).on("click","#itemDivClose",function(){
+        funShowDivCenter()
+        funShowDivCenter1()
+    })
+    $(document).on("click",".questionItem",function(){
+        var id
+        var html=""
+        id = $(this).attr("id")
+        var nodeName = ".item"+id
+        var divName = ".div"+id;
+        var that = $(this)
+        console.log(id)
+        $.ajax({
+            url:"http://localhost:8083/paper/questionItem",
+            data:{
+                "id":id,
+            },
+            dataType:"json",
+            type:"GET",
+            success:function (res) {
+                console.log(res)
+                if (res.status==200){
+                    html = ""
+
+                    for (var i = 0;i < res.data.length;i++){
+                        html += "<tr>"
+                        html+="<td>"+res.data[i].selectQuestion.title+"</td>"
+                        html+= "<td>"
+                        for (var j = 0;j<res.data[i].selectQuestion.itemList.length;j++){
+                            html+=res.data[i].selectQuestion.itemList[j].content
+                            html+="<br>"
+                        }
+                        html+= "</td>"
+                        html += "</tr>"
+                    }
+
+                    $(".item").append(html)
+                    funShowDivCenter()
+                   funShowDivCenter1()
+                }
+            }
+        })
+    })
+})
+</script>
 </body>
 </html>

@@ -95,6 +95,10 @@ public class QuestionController {
     @ResponseBody
     @RequestMapping("question/selQuestionBysubject")
     public JsonResult selQuestionBysubject(@RequestParam("subject")String subject, @RequestParam(value = "page", required = false, defaultValue = "1") int page){
+
         return JsonResult.ok(selectQuestionService.selecBySubject(subject, page));
     }
+
+
+
 }

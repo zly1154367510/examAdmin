@@ -1,5 +1,6 @@
 package com.zly.service;
 
+import com.zly.model.Paper;
 import com.zly.model.TestPaper;
 
 import java.util.List;
@@ -9,7 +10,11 @@ import java.util.List;
  */
 public interface TestPaperService {
 
-    List<TestPaper> getAll(int page);
+    List<Paper> getAll(int page);
 
     int getNum();
+
+    List<TestPaper> SelectAllByPId(Integer pId);
+
+    int insertPaper(String subject,String name,Integer[] ids);
 }

@@ -27,7 +27,7 @@ public class SelectQuestionServiceImpl implements SelectQuestionService {
 
     @Override
     public List<SelectQuestion> getAll(int page) {
-        PageHelper.startPage(page,5);
+        PageHelper.startPage(page,10);
         return selectQuestionMapper.selectAll();
     }
 
@@ -82,5 +82,8 @@ public class SelectQuestionServiceImpl implements SelectQuestionService {
         return selectQuestionMapper.selectAllBySubject(subject);
     }
 
-
+    @Override
+    public Integer selecNumBySubject(String subject) {
+        return selectQuestionMapper.selectNumBySubject(subject);
+    }
 }

@@ -68,7 +68,7 @@
                 <h5 class="centered">Marcel Newman</h5>
 
                 <li class="mt">
-                    <a  href="index.html">
+                    <a  href="/user/item">
                         <i class="fa fa-dashboard"></i>
                         <span>用户管理</span>
                     </a>
@@ -88,15 +88,22 @@
                     </a>
                 </li>
 
+                <li class="mt">
+                    <a class="active" href="/score/item">
+                        <i class="fa fa-dashboard"></i>
+                        <span>成绩管理</span>
+                    </a>
+                </li>
+
                 <li class="sub-menu">
                     <a href="javascript:;" >
                         <i class="fa fa-desktop"></i>
-                        <span>UI Elements</span>
+                        <span>考试系统</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="general.html">General</a></li>
-                        <li><a  href="buttons.html">Buttons</a></li>
-                        <li><a  href="panels.html">Panels</a></li>
+                        <li><a  href="general.html">技术支持：zly</a></li>
+                        <li><a  href="buttons.html">2018年5月26日16:49:41</a></li>
+                        <li><a  href="panels.html">联系：13112415228</a></li>
                     </ul>
                 </li>
             </ul>

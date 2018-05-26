@@ -11,7 +11,7 @@ public class TestPaper {
 
     private Paper paper;
 
-    private List<SelectQuestion> selectQuestion;
+    private SelectQuestion selectQuestion;
 
     public Paper getPaper() {
         return paper;
@@ -21,11 +21,11 @@ public class TestPaper {
         this.paper = paper;
     }
 
-    public List<SelectQuestion> getSelectQuestion() {
+    public SelectQuestion getSelectQuestion() {
         return selectQuestion;
     }
 
-    public void setSelectQuestion(List<SelectQuestion> selectQuestion) {
+    public void setSelectQuestion(SelectQuestion selectQuestion) {
         this.selectQuestion = selectQuestion;
     }
 

@@ -52,7 +52,7 @@
                                                 </button>
                                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                                     <c:forEach items="${item.itemList}" var="itemm">
-                                                        <li><a href="">${itemm.content}</a><c:if test="${itemm.isanswer}==1">-我是答案</c:if></li>
+                                                        <li><a href="">${itemm.content}</a><c:if test="${itemm.isanswer}==true">-我是答案</c:if></li>
                                                     </c:forEach>
                                                 </ul>
                                             </div>

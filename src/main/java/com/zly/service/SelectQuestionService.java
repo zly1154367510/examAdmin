@@ -13,6 +13,7 @@ public interface SelectQuestionService {
 
     List<SelectQuestion> selecBySubject(String subject,int page);
 
+    Integer selecNumBySubject(String subject);
     SelectQuestion selectById(Integer id);
 
     int updateQuestion(Integer qId,String subject,String type,String title,String[] trueAnswer,String[] isAnswer,String[] content,String[] itemId);
