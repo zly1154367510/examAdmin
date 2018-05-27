@@ -167,8 +167,6 @@
 
         $("#next").click(function(){
             page+=1
-
-
             //  console.log(subject)
             $.ajax({
                 url:"http://localhost:8083/paper/questionItemBySubject",

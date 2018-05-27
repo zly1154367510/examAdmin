@@ -73,5 +73,9 @@
             <mvc:mapping path="/*/*"/>
             <bean id="logInterceptor" class="com.zly.interceptor.LogInterceptor"></bean>
         </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean id="requesInterceptor" class="com.zly.interceptor.RequestInterceptor"></bean>
+        </mvc:interceptor>
     </mvc:interceptors>
 </beans>

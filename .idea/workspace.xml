@@ -2,57 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebd64a06-5cce-4c1b-bfb9-b8e7973a6ab8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zly/controller/ScordController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zly/controller/UserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/ScoreService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/StudentService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/impl/ScoreServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/impl/StudentServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/score/item.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/addItem.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/item.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_1_6_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_7_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zly/interceptor/RequestInterceptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/RedisService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/impl/RedisServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zly/utils/Md5Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zly/utils/UUIDUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/redis.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/redis.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/controller/PaperController.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/controller/PaperController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/controller/QuestionController.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/controller/QuestionController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/dao/PaperMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/dao/PaperMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/dao/SelectQuestionMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/dao/SelectQuestionMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/dao/TestPaperMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/dao/TestPaperMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/model/TestPaper.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/model/TestPaper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/service/SelectQuestionService.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/service/SelectQuestionService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/service/TestPaperService.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/service/TestPaperService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/service/impl/SelectQuestionServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/service/impl/SelectQuestionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/service/impl/TestPaperSerivceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/service/impl/TestPaperSerivceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/dao/StudentMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/dao/StudentMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/model/Paper.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/model/Paper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/service/StudentService.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/service/StudentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zly/service/impl/StudentServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/zly/service/impl/StudentServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/controller/PaperController.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/controller/PaperController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/controller/QuestionController.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/controller/QuestionController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/dao/PaperMapper.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/dao/PaperMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/dao/SelectQuestionMapper.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/dao/SelectQuestionMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/dao/TestPaperMapper.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/dao/TestPaperMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/model/TestPaper.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/model/TestPaper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/SelectQuestionService.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/SelectQuestionService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/TestPaperService.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/TestPaperService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/impl/SelectQuestionServiceImpl.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/impl/SelectQuestionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/impl/TestPaperSerivceImpl.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/impl/TestPaperSerivceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/controller/UserController.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/dao/StudentMapper.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/dao/StudentMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/model/Paper.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/model/Paper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/StudentService.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/StudentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/impl/StudentServiceImpl.class" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/com/zly/service/impl/StudentServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/exam_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/exam_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exam.iml" afterPath="$PROJECT_DIR$/exam.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/controller/PaperController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/controller/PaperController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/controller/QuestionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/controller/QuestionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/dao/PaperMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/dao/PaperMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/dao/SelectQuestionMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/dao/SelectQuestionMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/dao/TestPaperMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/dao/TestPaperMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/model/TestPaper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/model/TestPaper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/service/SelectQuestionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/SelectQuestionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/service/TestPaperService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/TestPaperService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/service/impl/SelectQuestionServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/impl/SelectQuestionServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/service/impl/TestPaperSerivceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/impl/TestPaperSerivceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/dao/StudentMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/dao/StudentMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/model/Paper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/model/Paper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/model/Student.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/model/Student.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/service/StudentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/StudentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zly/service/impl/StudentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zly/service/impl/StudentServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springmvc-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/springmvc-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/addItem.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/addItem.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/item.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/item.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/public/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/public/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/question/item.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/question/item.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/generatorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/addItem.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/addItem.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/item.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/item.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springmvc-config.xml" afterPath="$PROJECT_DIR$/target/classes/springmvc-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/springmvc-config.xml" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/classes/springmvc-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/paper/addItem.jsp" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/paper/addItem.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/paper/item.jsp" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/paper/item.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/public/header.jsp" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/public/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/question/item.jsp" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/question/item.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/user/addItem.jsp" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/user/addItem.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/user/item.jsp" afterPath="$PROJECT_DIR$/target/exam-background-ssm/WEB-INF/view/user/item.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -66,45 +62,115 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="item.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/score/item.jsp">
+      <file leaf-file-name="StudentServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/impl/StudentServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="52" />
+            <state relative-caret-position="260">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Student.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/model/Student.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="15" />
+              <folding>
+                <element signature="e#300#301#0" expanded="true" />
+                <element signature="e#328#329#0" expanded="true" />
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/StudentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestInterceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/interceptor/RequestInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScordController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/ScordController.java">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="805">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="springmvc-config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addItem.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/addItem.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1976">
+              <caret line="168" column="19" lean-forward="false" selection-start-line="168" selection-start-column="19" selection-end-line="168" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1527408558168" expanded="true" signature="4203:4213" ph="..." />
+                <marker date="1527408558168" expanded="true" signature="7172:7182" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreMapper.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/dao/ScoreMapper.java">
+      <file leaf-file-name="PaperController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/PaperController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="411">
+              <caret line="69" column="161" lean-forward="false" selection-start-line="69" selection-start-column="161" selection-end-line="69" selection-end-column="161" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaperMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/dao/PaperMapper.java">
+      <file leaf-file-name="QuestionController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/QuestionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="20" />
+            <state relative-caret-position="-1357">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,8 +183,8 @@
       <list>
         <option value="FxmlFile" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -144,57 +210,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/zly/service/AdminService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zly/service/impl/AdminServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zly/model/Admin.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zly/config/WebMvcConfigurer.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/testPaper.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/testPaper/item.jsp" />
-        <option value="$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/http/HttpServletRequestWrapper.class" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/interceptor/LogInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/springmvc-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/model/SelectQuestion.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/itemDetalis.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/utils/InsertId.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/dao/SelectItemMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/controller/PaparController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/question/itemDetails.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/itemDetails.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/question/addItem.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/utils/JsonResult.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/question/item.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/model/TestPaper.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/item.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/service/SelectQuestionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/dao/SelectQuestionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/service/impl/SelectQuestionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/controller/QuestionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/service/TestPaperService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/dao/TestPaperMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zly/controller/PaperController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/service/impl/TestPaperSerivceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/dao/PaperMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/addItem.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/service/StudengService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zly/service/StudentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zly/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zly/dao/StudentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zly/service/impl/StudentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/service/ScoreService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/service/impl/ScoreServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/controller/ScordController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/addItem.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/model/Score.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/score/item.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/item.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/public/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/zly/dao/ScoreMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/item.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/item.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/utils/Md5Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/addItem.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/model/Paper.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/redis.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/utils/UUIDUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/service/impl/RedisServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/service/RedisService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/dao/StudentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/addItem.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/controller/PaperController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/interceptor/RequestInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/springmvc-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/service/StudentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/service/impl/StudentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zly/model/Student.java" />
       </list>
     </option>
   </component>
@@ -232,8 +298,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,78 +368,6 @@
               <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examBackgroundSsm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="score" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examBackgroundSsm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="question" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -435,6 +430,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -658,73 +657,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="interceptor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examBackgroundSsm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examBackgroundSsm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -735,29 +673,29 @@
     <property name="project.structure.side.proportion" value="0.53952205" />
     <property name="last_opened_file_path" value="F:/taouser" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/exam/src/main/java/com/zly/controller/AdminController.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/exam/src/main/java/com/zly/service/RedisService.java" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.zly" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\exam\src\main\webapp\WEB-INF\view" />
-      <recent name="F:\exam\src\main\webapp\static" />
-      <recent name="F:\exam\src\main\webapp" />
-      <recent name="F:\exam\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.zly.utils" />
-      <recent name="com.zly.interceptor" />
-      <recent name="com.zly.config" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\exam\src\main\webapp\WEB-INF\view\login" />
       <recent name="F:\exam\src\main\webapp\static" />
       <recent name="F:\exam\src\main\webapp\WEB-INF" />
       <recent name="F:\exam\src\main\resources" />
       <recent name="F:\exam\src\main\webapp" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.zly" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zly.interceptor" />
+      <recent name="com.zly.utils" />
+      <recent name="com.zly.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\exam\src\main\webapp\WEB-INF\view" />
+      <recent name="F:\exam\src\main\webapp\static" />
+      <recent name="F:\exam\src\main\webapp" />
+      <recent name="F:\exam\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1370,11 +1308,12 @@
       <workItem from="1527232944501" duration="1750000" />
       <workItem from="1527239250190" duration="3695000" />
       <workItem from="1527300649814" duration="24358000" />
+      <workItem from="1527396197311" duration="12964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65567000" />
+    <option name="totallyTimeSpent" value="78531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1391,7 +1330,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3664036" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36302143" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1399,10 +1338,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931229" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.091319054" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28770053" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29144385" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1473,7 +1412,7 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="24" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1482,89 +1421,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="186" column="42" lean-forward="false" selection-start-line="186" selection-start-column="42" selection-end-line="186" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/message/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/model/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/testPaper.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/testPaper/item.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/config/WebMvcConfigurer.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/http/HttpServletRequestWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/interceptor/LogInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/impl/AdminServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/utils/InsertId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1702">
-          <caret line="74" column="26" lean-forward="false" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1357">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.8.RELEASE/spring-aop-4.3.8.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/question/itemDetails.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -1577,34 +1433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#293#294#0" expanded="false" />
-            <element signature="e#324#325#0" expanded="false" />
-            <element signature="e#382#383#0" expanded="false" />
-            <element signature="e#422#423#0" expanded="false" />
-            <element signature="e#690#691#0" expanded="false" />
-            <element signature="e#713#714#0" expanded="false" />
-            <element signature="e#743#744#0" expanded="false" />
-            <element signature="e#768#769#0" expanded="false" />
-            <element signature="e#805#806#0" expanded="false" />
-            <element signature="e#833#834#0" expanded="false" />
-            <element signature="e#867#868#0" expanded="false" />
-            <element signature="e#897#898#0" expanded="false" />
-            <element signature="e#943#944#0" expanded="false" />
-            <element signature="e#1013#1014#0" expanded="false" />
-            <element signature="e#1044#1045#0" expanded="false" />
-            <element signature="e#1071#1072#0" expanded="false" />
-            <element signature="e#1111#1112#0" expanded="false" />
-            <element signature="e#1172#1173#0" expanded="false" />
-            <element signature="e#1203#1204#0" expanded="false" />
-            <element signature="e#1230#1231#0" expanded="false" />
-            <element signature="e#1270#1271#0" expanded="false" />
-            <element signature="e#1331#1332#0" expanded="false" />
-            <element signature="e#1363#1364#0" expanded="false" />
-            <element signature="e#1391#1392#0" expanded="false" />
-            <element signature="e#1433#1434#0" expanded="false" />
-            <element signature="e#1497#1498#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1612,28 +1440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1526981535393" expanded="true" signature="1356:1517" ph="select , fro... " />
-            <marker date="1526981535393" expanded="true" signature="1603:1671" ph="delete from " />
-            <marker date="1526981535393" expanded="true" signature="1756:1981" ph="insert into ex_select_question... " />
-            <marker date="1526981535393" expanded="true" signature="3030:3466" ph="update ex_se... " />
-            <marker date="1526981535393" expanded="true" signature="3572:3804" ph="update ex_se... " />
-            <marker date="1526981535393" expanded="true" signature="3901:4088" ph="update ex_se... " />
-            <marker date="1526981535393" expanded="true" signature="5256:5417" ph="select , fro... " />
-            <marker date="1526981535393" expanded="true" signature="5503:5571" ph="delete from " />
-            <marker date="1526981535393" expanded="true" signature="5656:5881" ph="insert into ex_select_question... " />
-            <marker date="1526981535393" expanded="true" signature="6930:7366" ph="update ex_se... " />
-            <marker date="1526981535393" expanded="true" signature="7472:7704" ph="update ex_se... " />
-            <marker date="1526981535393" expanded="true" signature="7801:7988" ph="update ex_se... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/utils/JsonResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1645,25 +1451,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/model/Paper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="e#388#389#0" expanded="false" />
-            <element signature="e#411#412#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/model/TestPaper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
           <folding>
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="false" />
+            <element signature="e#505#506#0" expanded="false" />
+            <element signature="e#557#558#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1672,50 +1467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/itemDetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/SelectQuestionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/item.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="78" column="32" lean-forward="true" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/question/addItem.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="116" column="65" lean-forward="true" selection-start-line="116" selection-start-column="65" selection-end-line="116" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/impl/SelectQuestionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="86" column="64" lean-forward="true" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="64" />
-          <folding>
-            <element signature="e#2802#2803#0" expanded="true" />
-            <element signature="e#2873#2874#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1724,7 +1475,7 @@
         <state relative-caret-position="394">
           <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1742,9 +1493,9 @@
         <state relative-caret-position="202">
           <caret line="48" column="74" lean-forward="false" selection-start-line="48" selection-start-column="74" selection-end-line="48" selection-end-column="74" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1026#1027#0" expanded="false" />
+            <element signature="e#1084#1085#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1757,57 +1508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/addItem.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="181" column="36" lean-forward="true" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1527321308207" expanded="true" signature="4203:4213" ph="..." />
-            <marker date="1527321308207" expanded="true" signature="7174:7184" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/StudentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/QuestionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/PaperController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/dao/StudentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1825,27 +1529,7 @@
         <state relative-caret-position="253">
           <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/impl/StudentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1855,27 +1539,9 @@
         <state relative-caret-position="391">
           <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/item.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/public/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="91" column="50" lean-forward="false" selection-start-line="91" selection-start-column="50" selection-end-line="91" selection-end-column="50" />
-          <folding>
-            <marker date="1527326272216" expanded="true" signature="6205:6218" ph="..." />
+            <element signature="e#299#300#0" expanded="false" />
+            <element signature="e#340#341#0" expanded="false" />
+            <element signature="e#374#375#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1885,9 +1551,9 @@
         <state relative-caret-position="308">
           <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#654#655#0" expanded="false" />
+            <element signature="e#703#704#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1900,46 +1566,321 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/addItem.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-598">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="81" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/score/item.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="920">
           <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/ScordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/dao/PaperMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/dao/ScoreMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+        <state relative-caret-position="69">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/itemDetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/question/addItem.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1426">
+          <caret line="72" column="10" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="72" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/public/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="71" column="55" lean-forward="true" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
+          <folding>
+            <marker date="1527326272216" expanded="true" signature="6205:6218" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/item.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1022">
+          <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/impl/SelectQuestionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="86" column="64" lean-forward="true" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="64" />
+          <folding>
+            <element signature="e#2802#2803#0" expanded="true" />
+            <element signature="e#2873#2874#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/SelectQuestionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/utils/Md5Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/user/addItem.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="45" column="66" lean-forward="false" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/item.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="74" column="62" lean-forward="false" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/model/Paper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/dao/PaperMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/ScordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="203" column="33" lean-forward="false" selection-start-line="203" selection-start-column="33" selection-end-line="203" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/redis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/1.6.0.RELEASE/spring-data-redis-1.6.0.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10741">
+          <caret line="580" column="38" lean-forward="true" selection-start-line="580" selection-start-column="38" selection-end-line="580" selection-end-column="38" />
+          <folding>
+            <element signature="e#22878#23049#0" expanded="true" />
+            <element signature="e#23048#23049#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/utils/UUIDUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/1.6.0.RELEASE/spring-data-redis-1.6.0.RELEASE.jar!/org/springframework/data/redis/core/ValueOperations.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/utils/JsonResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-467">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding>
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1583#1584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/RedisService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/impl/RedisServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/dao/StudentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="20" column="69" lean-forward="false" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/QuestionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1357">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/paper/addItem.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1976">
+          <caret line="168" column="19" lean-forward="false" selection-start-line="168" selection-start-column="19" selection-end-line="168" selection-end-column="19" />
+          <folding>
+            <marker date="1527408558168" expanded="true" signature="4203:4213" ph="..." />
+            <marker date="1527408558168" expanded="true" signature="7172:7182" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/PaperController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="69" column="161" lean-forward="false" selection-start-line="69" selection-start-column="161" selection-end-line="69" selection-end-column="161" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/interceptor/RequestInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/StudentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/service/impl/StudentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zly/model/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="15" />
+          <folding>
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
           </folding>
         </state>
       </provider>

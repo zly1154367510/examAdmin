@@ -30,6 +30,8 @@
         <property name="configLocation" value="classpath:SqlMapConfig.xml"/>
     </bean>
 
+    <!--redis配置文件-->
+    <import resource="classpath:redis.xml"/>
 
 
 

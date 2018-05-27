@@ -13,4 +13,8 @@ public interface StudentService {
 
     int selectNumAll();
 
+    int insertAll(String username,String name,String password);
+
+    Student login(String username,String password);
+
 }

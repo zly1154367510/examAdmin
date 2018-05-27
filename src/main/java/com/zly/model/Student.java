@@ -1,13 +1,28 @@
 package com.zly.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Student {
+
+    @JsonIgnore
     private Integer id;
 
     private String username;
 
     private String name;
 
+    @JsonIgnore
     private String password;
+
+    private String token;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     public Student(Integer id, String username, String name, String password) {
         this.id = id;

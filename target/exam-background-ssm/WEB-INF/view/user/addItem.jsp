@@ -13,70 +13,81 @@
     <title>成绩管理</title>
 </head>
 <body>
+
 <jsp:include page="../public/header.jsp"/>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 <section id="main-content">
     <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> 成绩管理</h3>
+        <h3><i class="fa fa-angle-right"></i> 添加用户</h3>
+
+        <!-- BASIC FORM ELELEMNTS -->
         <div class="row mt">
-            <div class="col-lg-12">
-                <div class="content-panel">
-                    <h4><i class="fa fa-angle-right"></i> 成绩</h4>
+            <div class="col-lg-10">
+                <div class="form-panel">
+                    <h4 class="mb"><i class="fa fa-angle-right"></i> 添加用户</h4>
+                    <form id="userForm" class="form-horizontal style-form" method="post" action="/user/addItemDo">
+                        <input type="hidden" name="itemId" />
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label" for="username">用户名(必需)</label>
+                            <div class="col-sm-10"></div>
+                            <input  type="text" id="username" name="username"  class="form-control" required/>
 
-                    <section id="unseen">
-                        <table class="table table-bordered table-striped table-condensed">
-                            <thead>
-                            <tr>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label" for="name">真实姓名(必需)</label>
+                            <div class="col-sm-10"></div>
+                            <input  type="text" name="name"  id="name" class="form-control" required/>
 
-                                <th>用户名</th>
-                                <th>用户名</th>
-                                <th>用户名</th>
-                                <th>用户名</th>
-                                <th>用户名</th>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label" for="password">密码(必需)</label>
+                            <div class="col-sm-10"></div>
+                            <input  type="username" name="password" id="password" class="form-control" required/>
 
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach items="${list}" var="item">
-                                <tr>
-                                    <td>${item.name}</td>
-                                    <td>${item.username}</td>
-
-                                    <td>
-
-                                </tr>
-                            </c:forEach>
-                            </tbody>
-                        </table>
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="http://localhost:8083/user/item?page=${previousPage}" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://localhost:8083/user/item?page=${nextPage}" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <form action="http://localhost:8083/user/item" method="get">
-                                        <div class="input-group" width="20%">
-                                            <input type="text" class="form-control" name="page" width="20%" placeholder="Search for...">
-                                            <span class="input-group-btn">
-                                            <input class="btn btn-default" type="submit">跳转</input>
-                                        </span>
-                                        </div>
-                                    </form>
-
-                                </li>
-                            </ul>
-                        </nav>
-                    </section>
-                </div><!-- /content-panel -->
-            </div><!-- /col-lg-4 -->
-        </div><!-- /row -->
+                        </div>
+                        <input type="submit" value="提交" class='btn-default'>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 </section>
+
+<script type="text/javascript">
+    $.validator.setDefaults({
+        submitHandler: function() {
+            alert("提交事件!");
+        }
+    });
+    $().ready(function() {
+        $("#userForm").validate({
+            rules:{
+                username:{
+                    required:true,
+                    minlength:2
+                },
+                name:{
+                    requored:true
+                },
+                password:{
+                    required:true
+                }
+            },
+            message:{
+                username:{
+                    required:"这是必填字段",
+                    minlength:"不少于两个字母"
+                },
+                name:{
+                    required:"这是必填字段"
+                },
+                password:{
+                    required:"这是必填字段"
+                }
+            }
+        })
+    });
+</script>
 </body>
 </html>

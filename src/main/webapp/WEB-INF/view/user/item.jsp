@@ -21,7 +21,7 @@
             <div class="col-lg-12">
                 <div class="content-panel">
                     <h4><i class="fa fa-angle-right"></i> 用户</h4>
-                    <a href="/question/addItem">
+                    <a href="/user/addItem">
                         <div id="myButtons1" class="bs-example">
                             <button type="button" class="btn btn-primary">添加用户</button>
                         </div>

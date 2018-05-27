@@ -68,7 +68,6 @@ public class PaperController {
     @ResponseBody
     @RequestMapping("paper/questionItemBySubject")
     public JsonResult questionItemBySubject(@RequestParam(value = "page", required = false, defaultValue = "1") int page,@RequestParam("subject")String subject){
-        System.out.print(page);
         return JsonResult.ok(selectQuestionService.selecBySubject(subject,page));
     }
 

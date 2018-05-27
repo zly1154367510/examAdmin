@@ -11,6 +11,16 @@ public class Paper {
 
     private String name;
 
+    private String score;
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
+    }
+
     public Paper(Integer id, Date created, String subject, String name) {
         this.id = id;
         this.created = created;

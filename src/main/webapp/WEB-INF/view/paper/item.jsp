@@ -61,7 +61,7 @@
                                 <th>创建时间</th>
                                 <th>科目</th>
                                 <th>试卷详情</th>
-                                <th>操作</th>
+                                <th>每题分值</th>
 
                             </tr>
                             </thead>
@@ -72,7 +72,7 @@
                                         <td>${item.created}</td>
                                         <td>${item.subject}</td>
                                         <td class="questionItem" id="${item.id}"><button >详情</button></td>
-                                        <td><a href="/paper/itemDetail?id=${item.id}">修改</a></td>
+                                        <td>${item.score}</td>
                                     </tr>
                                 </c:forEach>
                             </tbody>
