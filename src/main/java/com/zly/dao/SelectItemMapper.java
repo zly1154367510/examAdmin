@@ -24,6 +24,8 @@ public interface SelectItemMapper {
     @Select("select * from ex_select_item where select_question_id =#{questionId}")
     List<SelectItem> selectByQuestionId(@Param("questionId")int id);
 
+
+
     @Update("update ex_select_item set content=#{content} where id=#{id}")
     int updContentById(@Param("id") Integer id,@Param("content") String content);
 

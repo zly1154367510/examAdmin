@@ -17,4 +17,6 @@ public interface StudentService {
 
     Student login(String username,String password);
 
+    boolean isLogin(String username,String token);
+
 }

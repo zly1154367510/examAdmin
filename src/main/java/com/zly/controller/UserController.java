@@ -76,4 +76,17 @@ public class UserController {
         }
     }
 
+    @ResponseBody
+    @RequestMapping("mi/user/isLogin")
+    public JsonResult isLogin(@RequestParam("username")String username,@RequestParam("token")String token){
+        //String username = request.getParameter("username");
+        if (studentService.isLogin(username, token)) {
+            return JsonResult.ok();
+        }else{
+            return JsonResult.exitUser();
+        }
+    }
+
+
+
 }

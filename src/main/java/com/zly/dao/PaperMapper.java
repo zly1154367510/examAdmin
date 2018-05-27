@@ -35,4 +35,5 @@ public interface PaperMapper {
     @Options(useGeneratedKeys = true, keyProperty = "InsertId.id")
     @Insert("insert into ex_paper (id,created,subject,name) values (null,#{created},#{subject},#{name})")
     int InsertAll(@Param("created")Date created,@Param("subject")String subject,@Param("name")String name,@Param("InsertId")InsertId id);
+
 }

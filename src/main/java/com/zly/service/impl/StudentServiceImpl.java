@@ -60,4 +60,14 @@ public class StudentServiceImpl implements StudentService {
         }
         return student;
     }
+
+    @Override
+    public boolean isLogin(String username, String token) {
+        String token1 = redisService.select(username);
+        if (token1 != null&&token1.equals(token)){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

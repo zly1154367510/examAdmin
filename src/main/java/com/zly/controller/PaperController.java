@@ -71,5 +71,18 @@ public class PaperController {
         return JsonResult.ok(selectQuestionService.selecBySubject(subject,page));
     }
 
+    @ResponseBody
+    @RequestMapping("mi/user/paper")
+    public JsonResult paper(@RequestParam(value = "page", required = false, defaultValue = "1") int page){
+
+        return JsonResult.ok(testPaperService.getAll(page));
+    }
+
+    @ResponseBody
+    @RequestMapping("mi/user/paperDeta")
+    public JsonResult paperDeta(@RequestParam("id")int id){
+        return JsonResult.ok(testPaperService.SelectAllByPId(id));
+    }
+
 
 }

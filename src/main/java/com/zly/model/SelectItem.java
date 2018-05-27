@@ -1,10 +1,14 @@
 package com.zly.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class SelectItem {
     private Integer id;
 
     private Integer selectQuestionId;
 
+
+    @JsonIgnore
     private Boolean isanswer;
 
     private String content;

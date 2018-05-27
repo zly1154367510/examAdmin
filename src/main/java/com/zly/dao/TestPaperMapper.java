@@ -35,6 +35,10 @@ public interface TestPaperMapper {
     @Select("select id,p_id as pId,q_id as qId from ex_paper_question where p_id=#{pId}")
     @Results({
             @Result(
+                    property = "qId",
+                    column = "qId"
+            ),
+            @Result(
                     property = "selectQuestion",
                     column = "qId",
                     many = @Many(select = "com.zly.dao.SelectQuestionMapper.selectAllById")
@@ -44,4 +48,5 @@ public interface TestPaperMapper {
 
     @Insert("insert into ex_paper_question (id,p_id,q_id) values(null,#{pId},#{qId})")
     int insertAll(@Param("pId")int pId,@Param("qId")int qId);
+
 }
