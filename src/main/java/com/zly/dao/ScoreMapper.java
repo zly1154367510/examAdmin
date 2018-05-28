@@ -1,10 +1,7 @@
 package com.zly.dao;
 
 import com.zly.model.Score;
-import org.apache.ibatis.annotations.One;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -33,4 +30,7 @@ public interface ScoreMapper {
 
     @Select("select count(*) from ex_score")
     int selectNumAll();
+
+    @Insert("insert into ex_score (id,studentid,subject,paper_id,mark) values (null,#{studengid},#{subject},#{paperId},#{mark})")
+    int insertAll(@Param("studengid")String username,@Param("subject")String subject,@Param("paperId")String pId,@Param("mark")String score);
 }

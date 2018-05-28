@@ -1,12 +1,10 @@
 package com.zly.controller;
 
-import com.zly.model.Score;
+import com.zly.model.*;
 
-import com.zly.model.SelectItem;
-import com.zly.model.SelectQuestion;
-import com.zly.model.TestPaper;
 import com.zly.service.ScoreService;
 
+import com.zly.service.SelectQuestionService;
 import com.zly.service.TestPaperService;
 import com.zly.utils.JsonResult;
 import org.apache.ibatis.annotations.Param;
@@ -33,6 +31,9 @@ public class ScordController {
     @Autowired
     private TestPaperService testPaperService;
 
+    @Autowired
+    private SelectQuestionService selectQuestionService;
+
     @RequestMapping("score/item")
     public String item(Model model, @RequestParam(value = "page", required = false, defaultValue = "1") int page){
 
@@ -51,17 +52,20 @@ public class ScordController {
     public JsonResult evaluate(@RequestParam("username")String username, @RequestParam("pId")String pId, HttpServletRequest request){
         List<TestPaper> list = testPaperService.SelectAllByPId(new Integer(pId));
         Integer scord = 0;
-        for (TestPaper item : list){
-            int itemId = item.getqId();
-            String[] qId = request.getParameterValues(itemId+"");
-            for (SelectItem i:item.getSelectQuestion().getItemList()){//此处循环进入问题的选项
-                for(String j : qId){//此处循环时取出学生选择的选项
-
-                    if (j.equals(i)&&i.getIsanswer()){
-                        scord++;
-                    }
-                }
+        ex:
+        for (TestPaper question : list){
+            int questionId = question.getqId();//获取试卷id
+            String[] itemId = request.getParameterValues(questionId+"");//通过试卷id获取用户的选项
+            //把试卷id和用户选项传入service进行评定
+            if (scoreService.evaluationScore(questionId,itemId)){
+                scord ++ ;
             }
+        }
+        Paper paper = testPaperService.selecPaperById(Integer.parseInt(pId));
+        scord = scord * Integer.parseInt(paper.getScore());
+        int res = scoreService.insertAll(username,paper.getSubject(),pId,scord.toString());
+        if (res==0){
+            return JsonResult.errorMsg("保存失败:"+scord);
         }
         return JsonResult.ok(scord);
     }

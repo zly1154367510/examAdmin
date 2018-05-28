@@ -52,4 +52,9 @@ public class TestPaperSerivceImpl implements TestPaperService {
         }
         return i;
     }
+
+    @Override
+    public Paper selecPaperById(int id) {
+        return paperMapper.selectById(id);
+    }
 }

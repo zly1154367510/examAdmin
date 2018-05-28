@@ -2,6 +2,7 @@ package com.zly.service;
 
 import com.zly.model.Score;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -12,4 +13,8 @@ public interface ScoreService {
     List<Score> selectAll(int page);
 
     int selectNumAll();
+
+    boolean evaluationScore(Integer questionId, String[] itemId);
+
+    int insertAll(String username,String subject,String pId,String score);
 }

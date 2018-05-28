@@ -17,4 +17,6 @@ public interface TestPaperService {
     List<TestPaper> SelectAllByPId(Integer pId);
 
     int insertPaper(String subject,String name,Integer[] ids);
+
+    Paper selecPaperById(int id);
 }
