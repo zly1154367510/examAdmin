@@ -49,4 +49,5 @@ public interface TestPaperMapper {
     @Insert("insert into ex_paper_question (id,p_id,q_id) values(null,#{pId},#{qId})")
     int insertAll(@Param("pId")int pId,@Param("qId")int qId);
 
+
 }

@@ -42,7 +42,11 @@ public class ScoreServiceImpl implements ScoreService {
 
     @Override
     public boolean evaluationScore(Integer questionId,String[] itemId) {
+
         boolean flag = false;
+        if (itemId==null){
+            return false;
+        }
         int len = selectItemMapper.selectByQuestionIdIsanswer(questionId);
         if (len != itemId.length){
             return flag;
@@ -61,5 +65,10 @@ public class ScoreServiceImpl implements ScoreService {
     @Override
     public int insertAll(String username, String subject, String pId, String score) {
         return scoreMapper.insertAll(username, subject, pId, score);
+    }
+
+    @Override
+    public List<Score> selectBySId(String id) {
+        return scoreMapper.selectBySId(id);
     }
 }

@@ -45,6 +45,15 @@
                                 <input  type="text" name="subject"  class="form-control"/>
                             </div>
                         </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">限时(秒)</label>
+                            <div class="col-sm-10">
+                                <input  type="text" name="time"  class="form-control"/>
+                            </div>
+                        </div>
+
                         <div class="row mt" id="selecItem">
                             <div class="col-lg-12">
                                 <div class="form-panel">

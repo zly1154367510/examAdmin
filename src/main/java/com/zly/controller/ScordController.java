@@ -55,6 +55,9 @@ public class ScordController {
         ex:
         for (TestPaper question : list){
             int questionId = question.getqId();//获取试卷id
+            if (request.getParameterValues(questionId+"")==null){
+                String[] itemId = null;
+            }
             String[] itemId = request.getParameterValues(questionId+"");//通过试卷id获取用户的选项
             //把试卷id和用户选项传入service进行评定
             if (scoreService.evaluationScore(questionId,itemId)){
@@ -68,6 +71,12 @@ public class ScordController {
             return JsonResult.errorMsg("保存失败:"+scord);
         }
         return JsonResult.ok(scord);
+    }
+
+    @ResponseBody
+    @RequestMapping("mi/score/item")
+    public JsonResult item(@RequestParam("username")String username){
+        return JsonResult.ok(scoreService.selectBySId(username));
     }
 
 

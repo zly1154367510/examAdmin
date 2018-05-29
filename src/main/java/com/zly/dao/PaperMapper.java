@@ -32,8 +32,11 @@ public interface PaperMapper {
     @Select("select count(*) from ex_paper")
     int selectAllNum();
 
+    @Select ("select time from ex_paper where id=#{id} ")
+    String selectTimeById(int id);
+
     @Options(useGeneratedKeys = true, keyProperty = "InsertId.id")
-    @Insert("insert into ex_paper (id,created,subject,name) values (null,#{created},#{subject},#{name})")
-    int InsertAll(@Param("created")Date created,@Param("subject")String subject,@Param("name")String name,@Param("InsertId")InsertId id);
+    @Insert("insert into ex_paper (id,created,subject,name,time) values (null,#{created},#{subject},#{name},#{time})")
+    int InsertAll(@Param("created")Date created,@Param("subject")String subject,@Param("name")String name,@Param("InsertId")InsertId id,@Param("time")String time);
 
 }

@@ -1,8 +1,10 @@
 package com.zly.service.impl;
 
 import com.github.pagehelper.PageHelper;
+import com.zly.dao.OnPerPaperMapper;
 import com.zly.dao.PaperMapper;
 import com.zly.dao.TestPaperMapper;
+import com.zly.model.OnPerPaper;
 import com.zly.model.Paper;
 import com.zly.model.TestPaper;
 import com.zly.service.TestPaperService;
@@ -26,6 +28,9 @@ public class TestPaperSerivceImpl implements TestPaperService {
     @Autowired
     private PaperMapper paperMapper;
 
+    @Autowired
+    private OnPerPaperMapper noPerPaperMapper;
+
     @Override
     public List<Paper> getAll(int page) {
         PageHelper.startPage(page,10);
@@ -44,9 +49,9 @@ public class TestPaperSerivceImpl implements TestPaperService {
 
     @Transactional
     @Override
-    public int insertPaper(String subject, String name,Integer[] ids) {
+    public int insertPaper(String subject, String name,Integer[] ids,String time) {
         InsertId id = new InsertId();
-        int i = paperMapper.InsertAll(new Date(System.currentTimeMillis()),subject,name,id);
+        int i = paperMapper.InsertAll(new Date(System.currentTimeMillis()),subject,name,id,time);
         for (int item : ids){
             testPaperMapper.insertAll(id.getId(),item);
         }
@@ -56,5 +61,25 @@ public class TestPaperSerivceImpl implements TestPaperService {
     @Override
     public Paper selecPaperById(int id) {
         return paperMapper.selectById(id);
+    }
+
+    @Override
+    public String selTimeById(int id) {
+        return paperMapper.selectTimeById(id);
+    }
+
+    @Override
+    public int savePaper(String username,int paper,int item,String answer,String time, Date date) {
+        return noPerPaperMapper.insertAll(username, paper, item, answer, time,date);
+    }
+
+    @Override
+    public int delByUsernamePaper(String username, int paper) {
+        return noPerPaperMapper.deleteByUsername(username,paper);
+    }
+
+    @Override
+    public List<OnPerPaper> selectNoPerByUsername(String username) {
+        return noPerPaperMapper.selectByUsername(username);
     }
 }

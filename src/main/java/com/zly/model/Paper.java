@@ -13,9 +13,21 @@ public class Paper {
 
     private String score;
 
+    private String time;
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
     public String getScore() {
         return score;
     }
+
+
 
     public void setScore(String score) {
         this.score = score;

@@ -1,8 +1,10 @@
 package com.zly.service;
 
+import com.zly.model.OnPerPaper;
 import com.zly.model.Paper;
 import com.zly.model.TestPaper;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,7 +18,15 @@ public interface TestPaperService {
 
     List<TestPaper> SelectAllByPId(Integer pId);
 
-    int insertPaper(String subject,String name,Integer[] ids);
+    int insertPaper(String subject,String name,Integer[] ids,String time);
 
     Paper selecPaperById(int id);
+
+    String selTimeById(int id);
+
+    int savePaper(String username,int paper,int item,String answer,String time, Date date);
+
+    int delByUsernamePaper(String username,int paper);
+
+    List<OnPerPaper> selectNoPerByUsername(String username);
 }

@@ -17,4 +17,6 @@ public interface ScoreService {
     boolean evaluationScore(Integer questionId, String[] itemId);
 
     int insertAll(String username,String subject,String pId,String score);
+
+    List<Score> selectBySId(String id);
 }

@@ -62,6 +62,7 @@
                                 <th>科目</th>
                                 <th>试卷详情</th>
                                 <th>每题分值</th>
+                                <th>限制时长(秒)</th>
 
                             </tr>
                             </thead>
@@ -73,6 +74,7 @@
                                         <td>${item.subject}</td>
                                         <td class="questionItem" id="${item.id}"><button >详情</button></td>
                                         <td>${item.score}</td>
+                                        <td>${item.time}</td>
                                     </tr>
                                 </c:forEach>
                             </tbody>
