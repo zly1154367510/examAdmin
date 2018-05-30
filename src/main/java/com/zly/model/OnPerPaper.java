@@ -1,6 +1,7 @@
 package com.zly.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class OnPerPaper {
     private Integer id;
@@ -33,6 +34,16 @@ public class OnPerPaper {
 
     public void setPapers(Paper papers) {
         this.papers = papers;
+    }
+
+    public List<OnPerPaper> onPerPapers;
+
+    public List<OnPerPaper> getOnPerPapers() {
+        return onPerPapers;
+    }
+
+    public void setOnPerPapers(List<OnPerPaper> onPerPapers) {
+        this.onPerPapers = onPerPapers;
     }
 
     public OnPerPaper(Integer id, String username, Integer paper, Integer item, String answer, String time) {

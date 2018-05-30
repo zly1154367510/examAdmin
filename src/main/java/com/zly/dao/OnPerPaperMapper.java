@@ -42,4 +42,10 @@ public interface OnPerPaperMapper {
     })
     List<OnPerPaper> selectByUsername(String username);
 
+
+    @Select("select answer,item,time,paper from ex_no_per_paper where username = #{username} and paper=#{pId}")
+
+    List<OnPerPaper> selectByUsername1(@Param("username")String username,@Param("pId")int pId);
+
+
 }

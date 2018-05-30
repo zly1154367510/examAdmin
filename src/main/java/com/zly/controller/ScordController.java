@@ -67,6 +67,7 @@ public class ScordController {
         Paper paper = testPaperService.selecPaperById(Integer.parseInt(pId));
         scord = scord * Integer.parseInt(paper.getScore());
         int res = scoreService.insertAll(username,paper.getSubject(),pId,scord.toString());
+        testPaperService.delByUsernamePaper(username,Integer.parseInt(pId));
         if (res==0){
             return JsonResult.errorMsg("保存失败:"+scord);
         }

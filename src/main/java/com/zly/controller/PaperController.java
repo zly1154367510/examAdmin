@@ -116,5 +116,11 @@ public class PaperController {
         return JsonResult.ok(testPaperService.selectNoPerByUsername(username));
     }
 
+    @RequestMapping("mi/user/noPerPaperDeta")
+    @ResponseBody
+    public JsonResult noPerPaperDeta(@RequestParam("username")String username,@RequestParam("pId") int pId){
+        return JsonResult.ok(testPaperService.selectNoPerByUsername1(username,pId));
+    }
+
 
 }

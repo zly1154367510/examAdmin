@@ -82,4 +82,9 @@ public class TestPaperSerivceImpl implements TestPaperService {
     public List<OnPerPaper> selectNoPerByUsername(String username) {
         return noPerPaperMapper.selectByUsername(username);
     }
+
+    @Override
+    public List<OnPerPaper> selectNoPerByUsername1(String username,int pId) {
+        return noPerPaperMapper.selectByUsername1(username,pId);
+    }
 }

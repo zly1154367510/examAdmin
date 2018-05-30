@@ -29,4 +29,6 @@ public interface TestPaperService {
     int delByUsernamePaper(String username,int paper);
 
     List<OnPerPaper> selectNoPerByUsername(String username);
+
+    List<OnPerPaper> selectNoPerByUsername1(String username,int pId);
 }
